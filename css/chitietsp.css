@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Mansalva&family=Pangolin&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&display=swap');
+
+* {
+    font-family: 'Playfair Display', serif;
+    color: #222;
+}
+/* Bg cho body */
+#body1 {
+    background: url("/img/BannerCollection/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: fit-content;
+}
+
+/* Can rong toan trang */
+.container-fluid-custom {
+    padding: 0 !important;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 20px;
+    border: none;
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/*Header start*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #F8F9FA;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#header img {
+    width: 40%;
+}
+
+@media screen and (max-width: 600px) {
+    #header img {
+        display: none;
+    }
+}
+
+
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar-list li {
+    position: relative;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 20px;
+    top: 20px;
+    height: 3em;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+.navbar-list li a:hover,
+.navbar-list li a.active,
+.navbar-list li a i:hover,
+.navbar-list li a i.active {
+    color: #C62901;
+}
+
+.navbar-list li a.active::after,
+.navbar-list li a:hover::after,
+.navbar-list li a i.active::after,
+.navbar-list li a i:hover::after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background: #C62901;
+    position: absolute;
+    /*phan tu con nam gan phan tu cha*/
+    left: 15px;
+    bottom: 20px;
+}
+
+/*Phần detail*/
+.wrap-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    padding-bottom: 40px;  
+    width: 100%;
+    background: transparent;/*ẩn background*/
+}
+.detail{     
+    width: 50%;
+}
+.detail .r1 {
+    background-color:  rgb(244, 241, 238);
+}
+.detail .r1{
+    width: 100%;
+    display: inline-flex; /*cho r1-c1 và r1-c2 chung 1 dòng*/
+    padding-bottom: 10px; 
+}
+.detail .r1 .r1-c1{
+    width: 50%;   
+}
+.detail .r1 .r1-c1 img{
+    width: 100%;
+}
+.detail .r1 .r1-c2{
+    width: 50%;
+    justify-content: center; /*căn giữa theo chiều ngang*/
+    align-items: center; /*căn giữa theo chiều dọc*/
+    display: flex; /*tạo cho phần tử cha như 1 flexbox*/
+}
+.r1-c2 h2, .r1-c2 p, .r1-c2 .star {
+    text-align: center;
+}
+.r1-c2 .product-info{
+    width: 100%;
+}
+.r1-c2 .product-price p{
+    color: red;
+    font-weight: 500;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.r1-c2 .star{
+    padding-bottom: 10px;
+}
+.r1-c2 .horizontal-line {
+    border-top: 2px solid #5c5b5b; /* Màu và kích thước đường kẻ ngang */
+}
+.r1-c2 .info-down{
+    padding-top: 10px;   
+}
+.r1-c2 .info-down p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.0;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.r1-c2 .info-down .share {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.r1-c2 .info-down .share a{
+    margin-right: 8px;
+}
+.r2{
+    width: 100%;
+    display: grid;/*cho div r2 thành 1 mạng lưới*/
+}
+.r2-c1, .r2-c2, .r2-c3 {/*phần mô tả*/
+    border: 1px solid black;
+    background-color: white;
+}
+.r2 h4{
+    text-align: center;
+    background-color: brown ;
+    padding: 10px 0;
+    color: #fff;
+}
+.r2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding:5px 15px 0 15px;  
+    text-align: justify;
+}
+
+/*Back to shop*/
+.r3{
+    width: 100%;
+    display: flex; /*định dạng div r3 thành 1 flexbox*/
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+.r3 a{
+    text-align: center;
+    width: 100%;
+    color: black;
+    font-size: 20px;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* footer */
+footer {
+    background: #F8F9FA;
+}
+
+footer #copyright {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#social a:hover i {
+    color: #C62901;
+}
+
+#social-link p,
+#social-link a,
+#copyright a {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+}

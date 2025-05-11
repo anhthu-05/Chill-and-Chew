@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="/css/dangky_dangnhap.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+      />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      />
+  </head>
+  <body id="body1">
+    <div class="container-fluid container-fluid-custom">
+      <!-- Header - Navigation -->
+      <section id="header">
+        <!-- Logo -->
+        <a href="index.html"><img src="/img/BannerCollection/Logo.png" class="logo" alt="" /></a>
+        <!-- Logo -->
+
+
+        <!-- List Nav -->
+        <div>
+          <ul class="navbar-list">
+            <li><a href="trangchu.html">Trang chủ</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="shop.html">Cửa hàng</a></li>
+            <li><a class="active" href="dangky_dangnhap.html">Đăng nhập/ Đăng ký</a></li>
+            <li>
+              <a href="giohang.html"><i class="fa fa-shopping-cart"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!-- List Nav -->
+      </section>
+      <!-- Header - Navigation -->
+           <div class="container">
+        <div id="login-form">
+            <h2>Đăng nhập</h2>
+            <div class="form-group">
+                <label for="login-username">Tên đăng nhập</label>
+                <input type="text" id="login-username" name="login-username" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Mật khẩu</label>
+                <input type="password" id="login-password" name="login-password" required>
+            </div>
+            <div class="form-actions">
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+            <button onclick="login()">Đăng nhập</button>
+            <div class="switch-form">
+                Chưa có tài khoản? <a href="#" onclick="showRegisterForm()">Đăng ký</a>
+            </div>
+        </div>
+
+
+        <div id="register-form">
+            <h2>Đăng ký</h2>
+            <div class="form-group">
+                <label for="register-username">Tên đăng nhập</label>
+                <input type="text" id="register-username" name="register-username" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Mật khẩu</label>
+                <input type="password" id="register-password" name="register-password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Xác nhận mật khẩu</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button onclick="register()">Đăng ký</button>
+            <div class="switch-form">
+                Đã có tài khoản? <a href="#" onclick="showLoginForm()">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+      <section class="d-flex justify-content-center" id="footer">
+        <footer>
+          <!-- Section: Social media -->
+          <section
+            class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+            id="social"
+          >
+            <!-- Left -->
+            <div class="me-5">
+              <span>Liên lạc với chúng tôi qua các nền tảng mạng xã hội:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+              <a href="" class="me-4"><i class="fab fa-facebook"></i></a>
+              <a href="" class="me-4"><i class="fab fa-twitter"></i></a>
+              <a href="" class="me-4"><i class="fab fa-google"></i></a>
+              <a href="" class="me-4"><i class="fab fa-instagram"></i></a>
+              <a href="" class="me-4"><i class="fab fa-linkedin"></i></a>
+              <a href="" class="me-4"><i class="fab fa-github"></i></a>
+            </div>
+            <!-- Right -->
+          </section>
+          <!-- Section: Social media -->
+
+          <!-- Section: Link -->
+          <section id="social-link">
+            <div class="container text-center text-md-start mt-4">
+              <!-- row -->
+              <div class="row p-3">
+                <!-- Column1 -->
+                <div class="col-md-3">
+                  <h6 class="text-uppercase mb-4 fw-bolder">
+                    <i class="fas fa-building me-2"></i>
+                    Chill and Chew 
+                  </h6>
+                  <p>
+                    Chúng tôi tin rằng đồ ăn vặt không chỉ là món ăn để giải khuây mà còn là niềm vui, 
+                    tạo nên những khoảnh khắc thú vị và đáng nhớ trong cuộc sống.
+                  </p>
+                </div>
+                <!-- Column1 -->
+
+                <!-- Column2 -->
+                <div class="col-md-2">
+                  <h6 class="text-uppercase mb-4 fw-bold">Sản phẩm</h6>
+                  <p>
+                    <a class="text-reset" href="">Bánh tráng</a>
+                  </p>
+                  <p>
+                    <a class="text-reset" href="">Tóp mỡ </a>
+                  </p>
+                  <p>
+                    <a class="text-reset" href="">Khô gà </a>
+                  </p>
+                  <p>
+                    <a class="text-reset" href="">Cơm cháy </a>
+                  </p>
+                </div>
+                <!-- Column2 -->
+
+                <!-- Column3 -->
+                <div class="col-md-3">
+                  <h6 class="text-uppercase mb-4 fw-bolder">Liên kết hữu ích</h6>
+                  <p>
+                    <a class="text-reset" href="">Giá cả </a>
+                  </p>
+                  <p>
+                    <a class="text-reset" href="">Cài đặt </a>
+                  </p>
+                  <p>
+                    <a class="text-reset" href="">Đặt hàng </a>
+                  </p>
+                  <p>
+                    <a class="text-reset" href="">Trợ giúp </a>
+                  </p>
+                </div>
+                <!-- Column3 -->
+
+                <!-- Column4 -->
+                <div class="col-md-4">
+                  <h6 class="text-uppercase mb-4 fw-bolder">Liên hệ </h6>
+                  <p>
+                    <i class="fas fa-home me-2"></i>
+                   Số 1 Võ Văn Ngân, TP. Thủ Đức
+                  </p>
+                  <p>
+                    <i class="fas fa-envelope me-2"></i>
+                    chillandchew@gmail.com
+                  </p>
+                  <p>
+                    <i class="fas fa-phone me-2"></i>
+                    + 08 257 749 59
+                  </p>
+                  <p>
+                    <i class="fas fa-print me-2"></i>
+                    + 09 421 394 77 
+                  </p>
+                </div>
+                <!-- Column4 -->
+              </div>
+              <!-- row -->
+            </div>
+          </section>
+          <!-- Section: Link -->
+
+          <!-- Section: Copyright -->
+          <section id="copyright">
+            <div class="text-center p-4">
+              © 20255 Copyright:
+              <a class="fw-bold text-reset" href="">CHILL AND CHEW</a>
+            </div>
+          </section>
+          <!-- Section: Copyright -->
+        </footer>
+      </section>
+      <!-- Footer -->
+       <script src="/js/dangky_dangnhap.js"></script>
+       </div>
+    </body>
+</html>
+
+
+
+
+

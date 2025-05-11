@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Mansalva&family=Pangolin&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&display=swap');
+
+
+* {
+    font-family: 'Playfair Display', serif;
+    color: #222;
+}
+/* Bg cho body */
+#body1 {
+    background: url("/img/BannerCollection/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: fit-content;
+}
+
+
+/* Can rong toan trang */
+.container-fluid-custom {
+    padding: 0 !important;
+}
+
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 20px;
+    border: none;
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/*Header start*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #F8F9FA;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+#header img {
+    width: 40%;
+}
+
+
+@media screen and (max-width: 600px) {
+    #header img {
+        display: none;
+    }
+}
+
+
+
+
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.navbar-list li {
+    position: relative;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 20px;
+    top: 20px;
+    height: 3em;
+}
+
+
+.navbar-list li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+
+.navbar-list li a:hover,
+.navbar-list li a.active,
+.navbar-list li a i:hover,
+.navbar-list li a i.active {
+    color: #C62901;
+}
+
+
+.navbar-list li a.active::after,
+.navbar-list li a:hover::after,
+.navbar-list li a i.active::after,
+.navbar-list li a i:hover::after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background: #C62901;
+    position: absolute;
+    /*phan tu con nam gan phan tu cha*/
+    left: 15px;
+    bottom: 20px;
+}
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+
+        button {
+            background-color: #d9534f; /* Màu đỏ tương tự */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+
+        button:hover {
+            background-color: #c9302c;
+        }
+
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .form-actions label {
+            margin: 0;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+
+        .form-actions input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+
+        .switch-form {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+
+        .switch-form a {
+            color: #d9534f;
+            text-decoration: none;
+        }
+
+
+        .switch-form a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Thêm style cho tab đăng ký (ẩn ban đầu) */
+        #register-form {
+            display: none;
+        }
+    footer {
+    background: #F8F9FA;
+    margin-top: 40px;
+}
+
+
+footer #copyright {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+#social a:hover i {
+    color: #C62901;
+}
+
+
+#social-link p,
+#social-link a,
+#copyright a {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+}
+
+
+
