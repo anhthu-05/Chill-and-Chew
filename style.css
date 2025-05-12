@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Mansalva&family=Pangolin&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&display=swap');
+
+* {
+    font-family: 'Playfair Display', serif;
+    color: #222;
+}
+
+/* Bg cho body */
+#body1 {
+    background: url("/img/BannerCollection/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: fit-content;
+}
+
+/* Can rong toan trang */
+.container-fluid-custom {
+    padding: 0 !important;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 20px;
+    border: none;
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/*Header start*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #F8F9FA;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#header img {
+    width: 40%;
+}
+
+@media screen and (max-width: 600px) {
+    #header img {
+        display: none;
+    }
+}
+
+
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar-list li {
+    position: relative;
+    list-style: none;
+    white-space: nowrap;
+    /*Ngăn các mục điều hướng quá dài bị tràn xuống dòng mới, giúp giữ nguyên trên cùng một dòng.*/
+    overflow: hidden;
+    padding: 0 20px;
+    top: 20px;
+    height: 3em;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+.navbar-list li a:hover,
+.navbar-list li a.active,
+.navbar-list li a i:hover,
+.navbar-list li a i.active {
+    color: #C62901;
+}
+
+.navbar-list li a.active::after,
+.navbar-list li a:hover::after,
+.navbar-list li a i.active::after,
+.navbar-list li a i:hover::after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background: #C62901;
+    position: absolute;
+    /*phan tu con nam gan phan tu cha*/
+    left: 15px;
+    bottom: 20px;
+}
+
+/*HOME PAGE*/
+/* Home: Banner */
+#hero {
+    background-image: url("/img/BannerCollection/Bannertrangchu.png");
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 30px;
+    justify-content: center;
+}
+
+
+
+
+#hero button {
+    background-image: url("/img/InkBrush.png");
+    background-size: cover;
+    height: 50px;
+    width: fit-content;
+    border: 0;
+    background-color: transparent;
+    padding: 14px 80px 14px 65px;
+    /*top right bottom left*/
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Home: Banner */
+
+/* Home: Collection */
+#HomeCollection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Name {
+    padding: 20px;
+}
+
+.Name h1 {
+    text-align: center;
+    color: #000;
+    font-size: 40px;
+    font-family: 'Rubik Glitch', cursive;
+}
+
+#BannerCollection {
+    position: relative;
+    padding: 0 30px 0px 30px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#BannerCollection .col-6 {
+    margin-bottom: 30px;
+}
+
+#BannerCollection .col-md-12 {
+    position: relative;
+    padding: 30px;
+    background-size: cover;
+    height: 35vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+#BannerCollection .col-md-12:hover {
+    transform: scale(1.1);
+}
+
+#banner1 {
+    background-image: url("/img/Shop/sp1.1_banhtrangcuon.jpg");
+}
+
+#banner2 {
+    background-image: url("/img/Shop/sp1.3_banhtrangtron.jpg");
+}
+
+#banner3 {
+    background-image: url("/img/Shop/sp2.2_comchaymohanh.jpg");
+}
+
+/*overlay cho bg img*/
+#BannerCollection .col-md-12::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 34, 39, 0.7);
+    z-index: 0;
+}
+
+#BannerCollection .col-md-12 h3,
+#BannerCollection .col-md-12 h2,
+#BannerCollection .col-md-12 p,
+#BannerCollection .col-md-12 button {
+    position: relative;
+    z-index: 1;
+}
+
+#BannerCollection .col-md-12 h3,
+#BannerCollection .col-md-12 p {
+    color: #dfd3d3;
+    font-size: 15px;
+}
+
+#BannerCollection .col-md-12 h2 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#BannerCollection .col-md-12 button {
+    position: absolute;
+    color: #000;
+    font-weight: bold;
+    bottom: 20px;
+    right: 30px;
+}
+
+#BannerCollection .col-md-12 button:hover {
+    background-color: #C62901;
+}
+
+#see-more-button {
+    display: flex;
+    justify-content: center;
+}
+
+#see-more-button button {
+    padding: 0;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: #000;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    transition: 0.3 ease;
+}
+
+#see-more-button button:hover {
+    color: #C62901;
+}
+
+/* Home: Collection */
+
+/* Home: Principle */
+#principle {
+    display: inline;
+}
+
+#principle table {
+    margin-top: 10px;
+    text-align: center;
+    padding: 8px;
+    background-color: #d3c6a7;
+    margin: 20px auto 20px auto;
+}
+
+#principle tr th {
+    font-size: 20px;
+    vertical-align: middle;
+    font-weight: bold;
+    font-family: 'EB Garamond', serif;
+    border-bottom: 1px solid #000;
+    padding: 15px;
+}
+
+#principle tr td {
+    vertical-align: top;
+    font-family: 'EB Garamond', serif;
+    font-size: 17px;
+    font-weight: 500;
+    border-bottom-width: 0px;
+    padding: 15px;
+}
+
+#principle td:nth-child(2),
+#principle th:nth-child(2) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+/* Home: Principle */
+
+/* Home: Story-Blog */
+#story-blog {
+    display: grid;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+#story-blog .card {
+    position: relative;
+    max-width: 600px;
+    max-height: auto;
+    margin-bottom: 50px;
+    border: 0;
+    background-color: #4d4530be;
+    border-radius: 10px;
+}
+
+#story-blog .card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#story-blog .row {
+    display: flex;
+    align-items: center;
+}
+
+#storyText {
+    text-align: center;
+}
+
+#storyText h3 {
+    font-weight: bolder;
+    color: #f5f5f5;
+}
+
+#storyText p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #d1cfcf;
+    font-family: 'EB Garamond', serif;
+}
+
+#storyText button {
+    background-color: #000;
+    bottom: 20px;
+    right: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: 0.3s ease-in;
+}
+
+#storyText button:hover {
+    color: #C62901;
+    font-weight: bolder;
+    scale: 1.2;
+}
+
+/* Home: Story-Blog */
+
+/* Footer */
+footer {
+    background: #F8F9FA;
+}
+
+footer #copyright {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#social a:hover i {
+    color: #C62901;
+}
+
+#social-link p,
+#social-link a,
+#copyright a {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+}
+
+/* Footer */
+
+
+/* SHOP PAGE */
+.name-custom {
+    font-family: 'Rubik Glitch', cursive !important;
+}
+
+.headline ul li a {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.headline ul li a.active,
+.headline ul li a:hover {
+    color: #000;
+}
+
+.product-img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    /*fit hinh phu hop theo kich thuoc*/
+}
+
+.card-product-custom {
+    padding: 20px !important;
+}
+
+.card-product-custom .card {
+    height: 100%;
+}
+
+.product-name-custom {
+    font-family: 'EB Garamond', serif !important;
+}
+
+.products .container {
+    background-color: #C62901;
+}
+
+/* CART PAGE */
+#cart h3 {
+    font-size: 40px;
+}
+
+.table-cart {
+    background-color: #F8F9FA;
+    border-radius: 20px;
+}
+
+.table-cart .table thead tr th {
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'EB Garamond', serif;
+    text-transform: uppercase;
+    color: #C62901;
+}
+
+.table-cart h4,
+.table-cart span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#products-cart tr td,
+.products-cart-custom {
+    font-family: 'EB Garamond', serif;
+    font-size: 19px;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+#products-cart tr td button {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    padding: 0;
+}
+
+#payment,
+#payment h4,
+#payment h4 span {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+}
+
+#payment button {
+    background-color: #C62901;
+    border: 0;
+    border-radius: 10px;
+    padding: 7px 20px 7px 20px;
+    font-size: 20px;
+    margin: 10px;
+    color: #fff;
+}
