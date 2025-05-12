@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Mansalva&family=Pangolin&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&display=swap');
+
+
+* {
+    font-family: 'Playfair Display', serif;
+    color: #222;
+}
+/* Bg cho body */
+#body1 {
+    background: url("/img/BgStory.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: fit-content;
+}
+
+
+/* Can rong toan trang */
+.container-fluid-custom {
+    padding: 0 !important;
+}
+
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 20px;
+    border: none;
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/*Header start*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #F8F9FA;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+#header img {
+    width: 40%;
+}
+
+
+@media screen and (max-width: 600px) {
+    #header img {
+        display: none;
+    }
+}
+
+
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.navbar-list li {
+    position: relative;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 20px;
+    top: 20px;
+    height: 3em;
+}
+
+
+.navbar-list li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+
+.navbar-list li a:hover,
+.navbar-list li a.active,
+.navbar-list li a i:hover,
+.navbar-list li a i.active {
+    color: #C62901;
+}
+
+
+.navbar-list li a.active::after,
+.navbar-list li a:hover::after,
+.navbar-list li a i.active::after,
+.navbar-list li a i:hover::after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background: #C62901;
+    position: absolute;
+    /*phan tu con nam gan phan tu cha*/
+    left: 15px;
+    bottom: 20px;
+}
+
+
+/*nội dung*/
+.about{
+    width: 100%;
+}
+.about .banner {
+    position: relative;
+    background: url("/img/BannerCollection/bannerabout.png") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /*2 title xuống hàng*/
+}
+
+
+/*title của banner*/
+.about .banner .title-ban{
+    border: 1px solid rgb(186, 236, 176);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgb(27, 114, 49);  
+}
+
+
+.about .banner .title-ban h2{
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.about .banner .title-ban h1 {
+    color: white;  
+}
+
+
+/*Phần ghi thông tin*/
+.wrap-company{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    padding-top: 40px;  
+    padding-bottom: 40px;    
+}
+.company{
+    background-color: hwb(0 95% 5%);    
+    width: 100%;
+    height: auto;
+}
+
+
+.company .on-title , .under-title {
+    text-align: center;
+    line-height: 1.5;  
+}
+
+
+.company .on-title h3{
+    color: #be0202 ;
+    padding-top: 20px;
+}
+.company .under-title{
+    margin-bottom: 15px;
+}
+.about-company{
+    padding-bottom: 25px;    
+}
+
+
+/*Văn bản thông tin*/
+.about-company p{
+    text-align: justify;
+    color: #072c04;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 0 60px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+
+/*footer*/
+footer {
+    background: #F8F9FA;
+}
+
+
+footer #copyright {
+    background-color: rgba(29, 104, 58, 0.05);
+}
+
+
+#social a:hover i {
+    color: #C62901;
+}
+
+
+#social-link p,
+#social-link a,
+#copyright a {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+}
+
+/*phần câu hỏi thường gặp */
+.normal {
+  color: black;
+  padding: 10px 20px;
+  border: 1px solid black;
+  background-color: rgb(29, 114, 49);
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.normal:hover {
+  background-color: rgb(29, 114, 49);
+}
+
